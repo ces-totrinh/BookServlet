@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;;
 
 public class MemoryDB {
-	public static final List<Book> Books =  new ArrayList<Book>() {
+	public static final List<Book> BOOKS =  new ArrayList<Book>() {
 		{
 	        add(new Book("The Great Gatsby", "F Scott Fitzgerald"));
 	        add(new Book("Moving On, Moving Forward", "Venkaiah Naidu"));
