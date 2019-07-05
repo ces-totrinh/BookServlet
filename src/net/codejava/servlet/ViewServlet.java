@@ -19,7 +19,7 @@ public class ViewServlet extends HttpServlet{
 		out.print("<table border='1' width='100%'");
 		out.print("<tr><th>Name</th><th>Author</th><th>Edit</th><th>Delete</th></tr>");
 		
-		for(Book book : MemoryDB.Books){
+		for(Book book : MemoryDB.BOOKS){
 			out.print(
 				"<tr>"
 					+ "<td>"+book.getName()+"</td>"
