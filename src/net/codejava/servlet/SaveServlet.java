@@ -20,10 +20,10 @@ public class SaveServlet extends HttpServlet{
 		String n = req.getParameter("name");
 		String au = req.getParameter("author");
 		
-		MemoryDB.Books.add(new Book(n, au));
+		MemoryDB.BOOKS.add(new Book(n, au));
 		
 		res.sendRedirect("view");
-	    out.close();
+		out.close();
 		
 	}
 }

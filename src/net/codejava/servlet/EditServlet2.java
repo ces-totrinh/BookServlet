@@ -21,13 +21,13 @@ public class EditServlet2 extends HttpServlet{
 		String sid=req.getParameter("id");
 		int id =Integer.parseInt(sid);
 		
-		Book book = MemoryDB.Books.stream().filter(b -> b.getId() == id).findAny().orElse(null);		
-		int index = MemoryDB.Books.indexOf(book);
+		Book book = MemoryDB.BOOKS.stream().filter(b -> b.getId() == id).findAny().orElse(null);		
+		int index = MemoryDB.BOOKS.indexOf(book);
 		
-		MemoryDB.Books.set(index, new Book(n, au));
+		MemoryDB.BOOKS.set(index, new Book(n, au));
 		
 		res.sendRedirect("view");
-	    out.close();
+		out.close();
 		
 	}
 }
