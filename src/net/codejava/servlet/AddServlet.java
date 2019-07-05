@@ -5,7 +5,7 @@ import javax.servlet.*;
 import java.io.*;
 
 public class AddServlet extends HttpServlet{
-	
+	@Override
 	protected void doGet( HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
 		res.setContentType("text/html");

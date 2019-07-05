@@ -9,7 +9,7 @@ import javax.servlet.*;
 import java.io.*;
 
 public class EditServlet extends HttpServlet{
-	
+	@Override
 	protected void doGet( HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
 		res.setContentType("text/html");
@@ -18,7 +18,7 @@ public class EditServlet extends HttpServlet{
 		String sid=req.getParameter("id");
 		int id =Integer.parseInt(sid);
 		
-		Book book = MemoryDB.Books.stream().filter(b -> b.getId() == id).findAny().orElse(null);
+		Book book = MemoryDB.BOOKS.stream().filter(b -> b.getId() == id).findAny().orElse(null);
 		out.print("<div style='text-align: center'>");
 		out.print("<h1>Update Book</h1>");
 		out.print("<form action='editServlet' method='post'>");

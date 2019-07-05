@@ -8,7 +8,7 @@ import javax.servlet.*;
 import java.io.*;
 
 public class DeleteServlet extends HttpServlet{
-	
+	@Override
 	protected void doGet( HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
@@ -16,7 +16,7 @@ public class DeleteServlet extends HttpServlet{
 		String sid=req.getParameter("id");
 		int id =Integer.parseInt(sid);
 		
-		MemoryDB.Books.removeIf(b -> (b.getId()== id)); 
+		MemoryDB.BOOKS.removeIf(b -> (b.getId()== id)); 
 		
 		res.sendRedirect("view");
 		
